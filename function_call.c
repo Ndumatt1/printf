@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
@@ -7,7 +8,7 @@
  *
  * @format: strin containing characters
  *
- * @op: structure defined in headerfile
+ * @ops: structure defined in headerfile
  *
  * @ap: argument list containing all the specifiers
  *
@@ -48,14 +49,3 @@ int func_call(const char *format, print_func ops[], va_list ap)
 			{
 				return (-1);
 			}
-		}
-	i = i + 1;
-		}
-		else 
-		{
-			_putchar (format[i]);
-			count++;
-		}
-	return (count);
-}
-

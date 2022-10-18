@@ -1,9 +1,15 @@
+
 #include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
 
 /**
+ * _printf - prints characters and string
  *
+ * @format: format specifier
+ *
+ * Return: Number of characters printed
+ * excluding the null bytes
  */
 
 int _printf(const char *format, ...)

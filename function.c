@@ -1,3 +1,4 @@
+
 #include <stdarg.h>
 #include "main.h"
 #include <unistd.h>
@@ -6,11 +7,14 @@
  * print_char - prints character
  *
  * @ap: variable list
+ *
+ * Return: number of character printed
  */
 
 int print_char(va_list ap)
 {
 	char c = va_arg(ap, int);
+
 	return (write(1, &c, 1));
 }
 
@@ -18,6 +22,8 @@ int print_char(va_list ap)
  * print_string - prints string
  *
  * @ap: varaible list
+ *
+ * Return: Number of characters printed
  */
 
 int print_string(va_list ap)
@@ -39,11 +45,12 @@ int print_string(va_list ap)
 /**
  * print_specifier - prints percentage
  *
- * Return: to the standard out 
+ * Return: to the standard out
  */
 
-int print_specifier()
+int print_specifier(void)
 {
 	char c = '%';
+
 	return (write(1, &c, 1));
 }
