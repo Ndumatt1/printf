@@ -49,3 +49,13 @@ int func_call(const char *format, print_func ops[], va_list ap)
 			{
 				return (-1);
 			}
+			}
+			i = i + 1;
+			}
+			else
+			{
+				_putchar(format[i]);
+						count++;
+						}
+						return (count);
+}

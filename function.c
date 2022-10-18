@@ -48,7 +48,7 @@ int print_string(va_list ap)
  * Return: to the standard out
  */
 
-int print_specifier(void)
+int print_specifier(__attribute__((unused))va_list ap)
 {
 	char c = '%';
 
