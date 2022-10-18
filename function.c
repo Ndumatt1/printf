@@ -44,6 +44,7 @@ int print_string(va_list ap)
 
 /**
  * print_specifier - prints percentage
+ * @ap: Variable list
  *
  * Return: to the standard out
  */
