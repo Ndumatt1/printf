@@ -3,16 +3,6 @@
 #include <stdarg.h>
 
 /**
- * printstring - print out stings
- * @s: the string to print
- *
- */
-
-void printstring(char *s)
-{
-	putchar(*s);
-}
-/**
  * _printf - self made printf function
  * @format: input strings to print
  *
@@ -23,7 +13,6 @@ int _printf(const char *format, ...)
 {
 	const char *p;
 	int i;
-	char *s;
 
 	va_list list;
 
@@ -45,7 +34,7 @@ int _printf(const char *format, ...)
 			continue;
 
 			case 's':
-				s = va_arg(list, char *);
+				va_arg(list, char *);
 				_putchar('s');
 			continue;
 
