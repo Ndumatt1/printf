@@ -3,11 +3,20 @@
 #include <stdarg.h>
 
 /**
- * _printf - prints char and string to standardout
+ * printstring - print out stings
+ * @s: the string to print
  *
- * @format: last argument to the varaidic function
+ */
+
+void printstring(char *s)
+{
+	putchar(*s);
+}
+/**
+ * _printf - self made printf function
+ * @format: input strings to print
  *
- * Return: number of character printed
+ * Return: 0.
  */
 
 int _printf(const char *format, ...)
@@ -32,18 +41,19 @@ int _printf(const char *format, ...)
 			case 'c':
 
 				i = va_arg(list, int);
-			_putchar(i);
-			break;
+				_putchar('c');
+			continue;
 
 			case 's':
 				s = va_arg(list, char *);
-			printstring(s);
-			break;
+				_putchar('s');
+			continue;
 
 			case '%':
 				_putchar('%');
-				break;
+				continue;
 		}
+		_putchar(*p);
 	}
 	va_end(list);
 	return (i);
