@@ -3,19 +3,12 @@
 #include <stdarg.h>
 
 /**
+ * _printf - prints char and string to standardout
  *
- */
-
-#include "main.h"
-#include <stdio.h>
-
-/**
+ * @format: last argument to the varaidic function
  *
+ * Return: number of character printed
  */
-void printstring(char *s)
-{
-	putchar(*s);
-}
 
 int _printf(const char *format, ...)
 {
@@ -24,6 +17,7 @@ int _printf(const char *format, ...)
 	char *s;
 
 	va_list list;
+
 	va_start(list, format);
 
 	for (p = format; *p != '\0'; p++)
@@ -36,6 +30,7 @@ int _printf(const char *format, ...)
 		switch (*++p)
 		{
 			case 'c':
+
 				i = va_arg(list, int);
 			_putchar(i);
 			break;
@@ -52,4 +47,18 @@ int _printf(const char *format, ...)
 	}
 	va_end(list);
 	return (i);
+}
+
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * printstring - prints string
+ *
+ * @s: string to print
+ */
+
+void printstring(char *s)
+{
+	putchar(*s);
 }
