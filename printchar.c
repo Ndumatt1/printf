@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 		{
 			case 'c':
 				i = va_arg(list, int);
-			_putchar('c');
+				_putchar('c');
 			continue;
 
 			case 's':
