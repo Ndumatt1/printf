@@ -3,11 +3,10 @@
 #include <stdarg.h>
 
 /**
+ * printstring - print out stings
+ * @s: the string to print
  *
  */
-
-#include "main.h"
-#include <stdio.h>
 
 /**
  *
@@ -16,7 +15,12 @@ void printstring(char *s)
 {
 	putchar(*s);
 }
-
+/**
+ * _printf - self made printf function
+ * @format: input strings to print
+ *
+ * Return: 0.
+ */
 int _printf(const char *format, ...)
 {
 	const char *p;
@@ -37,18 +41,19 @@ int _printf(const char *format, ...)
 		{
 			case 'c':
 				i = va_arg(list, int);
-			_putchar(i);
-			break;
+			_putchar('c');
+			continue;
 
 			case 's':
 				s = va_arg(list, char *);
-			printstring(s);
-			break;
+				_putchar('s');
+			continue;
 
 			case '%':
 				_putchar('%');
-				break;
+				continue;
 		}
+		_putchar(*p);
 	}
 	va_end(list);
 	return (i);
