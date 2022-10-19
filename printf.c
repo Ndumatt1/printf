@@ -24,9 +24,16 @@ int _printf(const char *format, ...)
 		{"%", print_specifier},
 		{"d", print_integer},
 		{"i", print_integer},
-		{"b", print_unsignedbin},
+		{"b", print_unsignedBin},
+		{"u", print_unsignedInt},
+		{"o", print_unsignedOct},
+		{"x", print_unsignedHex},
+		{"X", print_unsignedHeX},
 		{NULL, NULL}
 	};
+	if (format == NULL)
+		return (-1);
+
 
 	va_start(ap, format);
 
