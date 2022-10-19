@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 		{"%", print_specifier},
 		{"d", print_integer},
 		{"i", print_integer},
+		{"b", print_unsignedbin},
 		{NULL, NULL}
 	};
 
