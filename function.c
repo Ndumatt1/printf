@@ -43,6 +43,19 @@ int print_string(va_list ap)
 }
 
 /**
+ * print_int - print integer type from input
+ * @ap: Variable list
+ *
+ * Return: intger
+ */
+int print_int(va_list ap)
+{
+	int *num = va_arg(ap, int *);
+
+	_putchar(*num);
+	return (*num);
+}
+/**
  * print_specifier - prints percentage
  * @ap: Variable list
  *

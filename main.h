@@ -1,4 +1,3 @@
-
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -16,6 +15,7 @@ typedef struct print
 } print_func;
 int print_char(va_list ap);
 int print_string(va_list ap);
+int print_int(va_list ap);
 int print_specifier(__attribute__((unused))va_list ap);
 int func_call(const char *format, print_func ops[], va_list ap);
 int _putchar(char c);
