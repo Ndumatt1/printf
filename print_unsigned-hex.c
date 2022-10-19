@@ -52,4 +52,19 @@ int small_hex(unsigned int rem)
 			_putchar(98);
 			break;
 		case 2:
-			_putchar(99
+			_putchar(99);
+			break;
+		case 3:
+			_putchar(100);
+			break;
+		case 4:
+			_putchar(101);
+			break;
+		case 5:
+			_putchar(102);
+			break;
+		default:
+			return (-1);
+	}
+	return (count);
+}
