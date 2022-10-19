@@ -22,6 +22,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 void printstring(char *s);
 int print_integer(va_list ap);
-int print_unsignedbin(va_list ap);
+int print_unsiignedbInt(va_list ap);
 
 #endif
