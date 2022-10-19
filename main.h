@@ -2,6 +2,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdarg.h>
+#include <stdio.h>
 /**
  * struct print - struct name
  * @str: conversion specifier
@@ -19,5 +21,6 @@ int func_call(const char *format, print_func ops[], va_list ap);
 int _putchar(char c);
 int _printf(const char *format, ...);
 void printstring(char *s);
+int print_integer(va_list ap);
 
 #endif
