@@ -34,7 +34,7 @@ int print_HEX(unsigned int num)
 	       count += print_HEX(num / 16);
 	}
 	rem = (num % 16);
-	if (rem > 9);
+	if (rem > 9)
 	rem = (rem % 10);
 	switch (rem)
 	{
@@ -57,7 +57,7 @@ int print_HEX(unsigned int num)
 			_putchar(70);
 			break;
 		default:
-			return(-1);
+			return (-1);
 	}
 	return (count);
 }

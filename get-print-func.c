@@ -19,21 +19,20 @@ int _printf(const char *format, ...)
 	print_func ops[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"d", print_int},
-		{"i", print_int},
-		{"%", print_specifier},
 		{"d", print_integer},
 		{"i", print_integer},
-		{"b", print_unsignedBin},
+		{"%", print_specifier},
+		{"b", print_unsignedbin},
 		{"u", print_unsignedInt},
 		{"o", print_unsignedOct},
 		{"x", print_unsignedHex},
-		{"X", print_unsignedHeX},
+		{"X", print_unsignedHex},
 		{NULL, NULL}
 	};
 	if (format == NULL)
+	{
 		return (-1);
-
+	}
 
 	va_start(ap, format);
 

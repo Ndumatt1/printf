@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
 
-OB
 int print_num(unsigned int num);
 
 /**
@@ -25,7 +24,7 @@ int print_integer(va_list ap)
 		_putchar('-');
 		count++;
 	}
-BOB	else
+	else
 	{
 		num = n;
 	}
