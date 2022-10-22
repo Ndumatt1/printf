@@ -18,7 +18,7 @@ int print_integer(va_list ap)
 	if (n < 0)
 	{
 		num = -n;
-		_putcahr('_');
+		_putchar('_');
 		count++;
 	}
 	else
